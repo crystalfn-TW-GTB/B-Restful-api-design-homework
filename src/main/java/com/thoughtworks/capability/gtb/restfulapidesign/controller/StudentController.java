@@ -40,4 +40,9 @@ public class StudentController {
     public List<Student> getStudentList(@RequestParam(name = "gender", required = false) String gender) {
         return studentService.getStudentList(gender);
     }
+
+    @GetMapping("/{id}")
+    public Student getStudentById(@PathVariable Integer id) {
+        return studentService.getStudentById(id);
+    }
 }

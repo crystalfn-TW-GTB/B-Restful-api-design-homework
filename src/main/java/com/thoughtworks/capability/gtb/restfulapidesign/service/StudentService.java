@@ -35,4 +35,8 @@ public class StudentService {
         }
         return studentRepository.getAllstudentList();
     }
+
+    public Student getStudentById(int id) {
+        return studentRepository.getStudentById(id);
+    }
 }

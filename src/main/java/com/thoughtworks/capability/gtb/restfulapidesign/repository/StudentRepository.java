@@ -29,4 +29,8 @@ public class StudentRepository {
     public void deleteStudent(int id) {
         studentList.remove(id);
     }
+
+    public Student getStudentById(int id) {
+        return studentList.get(id);
+    }
 }
