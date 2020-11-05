@@ -33,4 +33,11 @@ public class StudentRepository {
     public Student getStudentById(int id) {
         return studentList.get(id);
     }
+
+    public void updateStudent(int id, Student updateStudent) {
+        Student student = studentList.get(id);
+        student.setName(updateStudent.getName());
+        student.setGender(updateStudent.getGender());
+        student.setNote(updateStudent.getNote());
+    }
 }

@@ -39,4 +39,15 @@ public class StudentService {
     public Student getStudentById(int id) {
         return studentRepository.getStudentById(id);
     }
+
+    public Student updateStudent(int id, Student student) {
+        Student updateStudent = Student.builder()
+                .id(id)
+                .name(student.getName())
+                .gender(student.getGender())
+                .note(student.getNote())
+                .build();
+        studentRepository.updateStudent(id, updateStudent);
+        return updateStudent;
+    }
 }
