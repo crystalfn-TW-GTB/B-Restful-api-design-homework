@@ -1,6 +1,6 @@
 package com.thoughtworks.capability.gtb.restfulapidesign.repository;
 
-import com.thoughtworks.capability.gtb.restfulapidesign.dto.Student;
+import com.thoughtworks.capability.gtb.restfulapidesign.domain.Student;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -16,5 +16,9 @@ public class StudentRepository {
 
     public void addStudent(Student student) {
         studentList.add(student);
+    }
+
+    public void deleteStudent(int id) {
+        studentList.remove(id);
     }
 }

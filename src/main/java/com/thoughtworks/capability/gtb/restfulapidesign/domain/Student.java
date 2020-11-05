@@ -1,19 +1,17 @@
-package com.thoughtworks.capability.gtb.restfulapidesign.dto;
+package com.thoughtworks.capability.gtb.restfulapidesign.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Group {
+public class Student {
     private int id;
     private String name;
-    private List<Student> studentList;
+    private String gender;
     private String note;
 }
