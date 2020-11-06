@@ -30,4 +30,9 @@ public class GroupController {
                                  @RequestBody String name){
         return groupService.updateGroupName(id, name);
     }
+
+    @GetMapping
+    public List<Group> getGroupList() {
+        return groupService.getGroupList();
+    }
 }

@@ -56,4 +56,8 @@ public class GroupService {
         group.setName(name);
         return group;
     }
+
+    public List<Group> getGroupList() {
+        return groupRepository.getGroupList();
+    }
 }
