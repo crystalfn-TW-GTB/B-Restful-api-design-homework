@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public class GroupRepository {
     private final static List<Group> groupList = new ArrayList<>();
-    private static final Integer GROUP_COUNT = 4;
+    private static final Integer GROUP_COUNT = 6;
 
     static {
         for (int i = 0; i < GROUP_COUNT; i++) {

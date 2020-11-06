@@ -14,7 +14,7 @@ import java.util.List;
 public class GroupService {
     final GroupRepository groupRepository;
     final StudentRepository studentRepository;
-    private static final Integer GROUP_COUNT = 4;
+    private static final Integer GROUP_COUNT = 6;
 
     public GroupService(GroupRepository groupRepository,
                         StudentRepository studentRepository) {
@@ -49,5 +49,11 @@ public class GroupService {
                     .build();
             groupList.set(i, newGroup);
         }
+    }
+
+    public Group updateGroupName(int id, String name) {
+        Group group = groupRepository.getGroupList().get(id);
+        group.setName(name);
+        return group;
     }
 }
